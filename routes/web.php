@@ -18,3 +18,23 @@ Route::get('blog', function () {
 });
 
 Route::get('hello', [Link::class,'helloworld']);
+
+Route::get('linktree', [Link::class, 'linktree']);
+
+Route::get('sidebar', [Link::class, 'sidebar']);
+
+Route::get('pertama', [Link::class, 'pertama']);
+
+Route::get('template1', [Link::class, 'template1']);
+
+Route::get('tes', [Link::class, 'tes']);
+
+Route::get('js1', [Link::class, 'js1']);
+
+Route::get('js2', [Link::class, 'js2']);
+
+Route::get('githubio', [Link::class, 'githubio']);
+
+Route::get('ets', [Link::class, 'ets']);
+
+Route::get('homepage', [Link::class, 'homepage']);

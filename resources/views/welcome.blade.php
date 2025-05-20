@@ -17,6 +17,7 @@
     </head>
     <body class="antialiased">
         <h1>Selamat Datang</h1>
+        <span>Untuk memudahkan navigasi view web page silahkan klik</span> <a href="/homepage" style="color:rgb(0, 0, 255); text-decoration: underline">link ini</a>
         <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
             @if (Route::has('login'))
                 <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">

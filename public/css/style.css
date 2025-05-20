@@ -1,0 +1,9 @@
+a:link {
+    text-decoration: none;
+    color: rgb(131, 255, 149);
+}
+a:hover{
+    text-decoration: none;
+    color: hotpink;
+    font-weight: bold;
+}
