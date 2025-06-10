@@ -69,3 +69,4 @@ Route::get('/makanan/edit/{id}', [MakananController::class, 'edit']);
 Route::post('/makanan/update', [MakananController::class, 'update']);
 Route::get('/makanan/hapus/{id}', [MakananController::class, 'hapus']);
 Route::get('/makanan/cari', [MakananController::class, 'cari']);
+

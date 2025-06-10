@@ -92,3 +92,4 @@ class MakananController extends Controller
 
 	}
 }
+
