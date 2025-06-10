@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Link;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\MakananController;
 
 //import java.io
 
@@ -59,3 +60,12 @@ Route::get('/pegawai/edit/{id}', [PegawaiController::class, 'edit']);
 Route::post('/pegawai/update', [PegawaiController::class, 'update']);
 Route::get('/pegawai/hapus/{id}', [PegawaiController::class, 'hapus']);
 Route::get('/pegawai/cari', [PegawaiController::class, 'cari']);
+
+
+Route::get('/makanan', [MakananController::class, 'index']);
+Route::get('/makanan/tambah', [MakananController::class, 'tambah']);
+Route::post('/makanan/store', [MakananController::class, 'store']);
+Route::get('/makanan/edit/{id}', [MakananController::class, 'edit']);
+Route::post('/makanan/update', [MakananController::class, 'update']);
+Route::get('/makanan/hapus/{id}', [MakananController::class, 'hapus']);
+Route::get('/makanan/cari', [MakananController::class, 'cari']);
