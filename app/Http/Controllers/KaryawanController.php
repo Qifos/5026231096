@@ -29,37 +29,32 @@ class KaryawanController extends Controller
 	// method untuk insert data ke table
 	public function store(Request $request)
 	{
-        // method auto generate kode pegawai
-        $last = DB::table('karyawan')
-              ->select('kodepegawai')
-              ->orderBy('kodepegawai','desc')
-              ->value('kodepegawai');
-
-        if ($last && preg_match('/^([A-Za-z]+)(\d+)$/', $last, $m)) {
-            // pisah huruf angka
-            $prefix    = $m[1];
-            $number    = (int) $m[2];
-            $width     = strlen($m[2]);
-
-            // increment and pad
-            $newNumber = str_pad($number + 1, $width, '0', STR_PAD_LEFT);
-
-            // re-join
-            $newCode   = $prefix . $newNumber;
-        } else {
-            // fallback
-            $newCode = 'A001';
-        }
+        $validated = $request->validate([
+            'kodepegawai' => 'required|string|max:5|unique:karyawan,kodepegawai',
+            'nama'        => 'required|string|max:50',
+            'divisi'      => 'required|string|max:5',
+            'departemen'  => 'required|string|max:10',
+        ]);
 
         // insert data ke table
 		DB::table('karyawan')->insert([
-			'kodepegawai' => $newCode,
-			'namalengkap' => $request->nama,
-			'divisi' => $request->divisi,
-			'departemen' => $request->departemen,
-		]);
+            'kodepegawai' => $validated['kodepegawai'],
+            'namalengkap' => $validated['nama'],
+            'divisi' => $validated['divisi'],
+            'departemen' => $validated['departemen'],
+        ]);
 		// alihkan halaman ke halaman
 		return redirect('/karyawan');
+
+	}
+
+    // method untuk edit data
+	public function edit($id)
+	{
+		// mengambil data  berdasarkan id yang dipilih
+		$karyawan = DB::table('karyawan')->where('kodepegawai',$id)->get();
+		// passing data  yang didapat ke view edit.blade.php
+		return view('editkaryawan',['karyawan' => $karyawan]);
 
 	}
 

@@ -25,6 +25,8 @@
 			<td>{{ $p->divisi }}</td>
 			<td>{{ $p->departemen }}</td>
 			<td>
+				<a href="/karyawan/edit/{{ $p->kodepegawai }}" class="btn btn-success">Edit</a>
+                |
 				<a href="/karyawan/hapus/{{ $p->kodepegawai }}" class="btn btn-danger">Hapus</a>
 			</td>
 		</tr>

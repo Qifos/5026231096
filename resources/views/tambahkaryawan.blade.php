@@ -7,6 +7,18 @@
 	<br/>
 	<br/>
 
+    <div class="row mb-3">
+        <div class="col-3">
+            Kode Pegawai
+        </div>
+        <div class="col-8">
+        <input type="text" name="kodepegawai" required="required" maxlength="5" class="form-control">
+        @error('kodepegawai')
+          <div class="text-danger small">{{ $message }}</div>
+        @enderror
+      </div>
+    </div>
+
 	<form action="/karyawan/store" method="post">
 		{{ csrf_field() }}
         <div class="row">

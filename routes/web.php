@@ -74,6 +74,7 @@ Route::get('/makanan/cari', [MakananController::class, 'cari']);
 Route::get('/karyawan', [KaryawanController::class, 'index']);
 Route::get('/karyawan/tambah', [KaryawanController::class, 'tambah']);
 Route::post('/karyawan/store', [KaryawanController::class, 'store']);
+Route::get('/karyawan/edit/{id}', [KaryawanController::class, 'edit']);
 Route::post('/karyawan/update', [KaryawanController::class, 'update']);
 Route::get('/karyawan/hapus/{id}', [KaryawanController::class, 'hapus']);
 Route::get('/karyawan/cari', [KaryawanController::class, 'cari']);
