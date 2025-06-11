@@ -5,6 +5,7 @@ use App\Http\Controllers\Link;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\MakananController;
+use App\Http\Controllers\KaryawanController;
 
 //import java.io
 
@@ -70,3 +71,9 @@ Route::post('/makanan/update', [MakananController::class, 'update']);
 Route::get('/makanan/hapus/{id}', [MakananController::class, 'hapus']);
 Route::get('/makanan/cari', [MakananController::class, 'cari']);
 
+Route::get('/karyawan', [KaryawanController::class, 'index']);
+Route::get('/karyawan/tambah', [KaryawanController::class, 'tambah']);
+Route::post('/karyawan/store', [KaryawanController::class, 'store']);
+Route::post('/karyawan/update', [KaryawanController::class, 'update']);
+Route::get('/karyawan/hapus/{id}', [KaryawanController::class, 'hapus']);
+Route::get('/karyawan/cari', [KaryawanController::class, 'cari']);
