@@ -82,6 +82,30 @@
             </div>
 
             <div class="d-flex align-items-center justify-content-center mt-3">
+                <a href="/keranjang" class="btn btn-primary d-flex align-items-center justify-content-between gap-3 textboxlink">
+                    <div class="icon-box">
+                        <i class='bx bx-spreadsheet icon'></i>
+                    </div>
+                    <span class="flex-grow-1 text-center textditextbox">Latihan 2</span>
+                    <div class="icon-box">
+                        <i class='bx bx-dots-vertical-rounded threebutton'></i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-center mt-3">
+                <a href="/karyawanganjil" class="btn btn-primary d-flex align-items-center justify-content-between gap-3 textboxlink">
+                    <div class="icon-box">
+                        <i class='bx bx-spreadsheet icon'></i>
+                    </div>
+                    <span class="flex-grow-1 text-center textditextbox">Latihan 3</span>
+                    <div class="icon-box">
+                        <i class='bx bx-dots-vertical-rounded threebutton'></i>
+                    </div>
+                </a>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-center mt-3">
                 <a href="/tes" class="btn btn-primary d-flex align-items-center justify-content-between gap-3 textboxlink">
                     <div class="icon-box">
                         <i class='bx bx-spreadsheet icon'></i>

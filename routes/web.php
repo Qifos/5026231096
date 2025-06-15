@@ -6,6 +6,8 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\MakananController;
 use App\Http\Controllers\KaryawanController;
+use App\Http\Controllers\KeranjangBelanjaController;
+use App\Http\Controllers\KaryawanControllerGanjil;
 
 //import java.io
 
@@ -78,3 +80,16 @@ Route::get('/karyawan/edit/{id}', [KaryawanController::class, 'edit']);
 Route::post('/karyawan/update', [KaryawanController::class, 'update']);
 Route::get('/karyawan/hapus/{id}', [KaryawanController::class, 'hapus']);
 Route::get('/karyawan/cari', [KaryawanController::class, 'cari']);
+
+Route::get('/keranjang', [KeranjangBelanjaController::class, 'index'])->name('keranjang.index');
+Route::get('/keranjang/create', [KeranjangBelanjaController::class, 'create'])->name('keranjang.create');
+Route::post('/keranjang', [KeranjangBelanjaController::class, 'store'])->name('keranjang.store');
+Route::delete('/keranjang/{id}', [KeranjangBelanjaController::class, 'destroy'])->name('keranjang.destroy');
+
+Route::get('/karyawanganjil', [KaryawanController::class,'index']);
+Route::get('/karyawanganjil/tambah', [KaryawanController::class,'tambah']);
+Route::post('/karyawanganjil/store',[KaryawanController::class,'store']);
+Route::get('/karyawanganjil/edit/{kodepegawai}', [KaryawanController::class,'edit']);
+Route::post('/karyawanganjil/update',[KaryawanController::class,'update']);
+Route::get('/karyawanganjil/hapus/{kodepegawai}', [KaryawanController::class,'hapus']);
+Route::get('/karyawanganjil/cari', [KaryawanController::class,'cari']);
