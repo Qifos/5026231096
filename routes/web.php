@@ -8,6 +8,7 @@ use App\Http\Controllers\MakananController;
 use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\KeranjangBelanjaController;
 use App\Http\Controllers\KaryawanControllerGanjil;
+use App\Http\Controllers\NilaiController;
 
 //import java.io
 
@@ -93,3 +94,9 @@ Route::get('/karyawanganjil/edit/{kodepegawai}', [KaryawanController::class,'edi
 Route::post('/karyawanganjil/update',[KaryawanController::class,'update']);
 Route::get('/karyawanganjil/hapus/{kodepegawai}', [KaryawanController::class,'hapus']);
 Route::get('/karyawanganjil/cari', [KaryawanController::class,'cari']);
+
+Route::get('/nilai', [NilaiController::class,'index']);
+Route::get('/nilai/tambah', [NilaiController::class,'tambah']);
+Route::post('/nilai/store',[NilaiController::class,'store']);
+Route::post('/nilai/update',[NilaiController::class,'update']);
+Route::get('/nilai/cari', [NilaiController::class,'cari']);
